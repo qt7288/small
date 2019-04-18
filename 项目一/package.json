@@ -1,0 +1,29 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "booke",
+  "main": "index.js",
+  "scripts": {
+    "test": "a",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qt7288/book.git"
+  },
+  "author": "booke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qt7288/book/issues"
+  },
+  "homepage": "https://github.com/qt7288/book#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  },
+  "keywords": [
+    "11"
+  ]
+}

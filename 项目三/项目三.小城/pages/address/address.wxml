@@ -1,0 +1,34 @@
+
+ <view wx:for="{{list}}" wx:key="{{key}}">
+   <view class='top'>
+   <view class="product-name-wrap">
+     <view class='ui-list-item-info'>收货人:{{item.uname}}
+      <text decode="{{true}}" space='{{true}}'>&nbsp;&nbsp;</text>{{item.phone}}
+      </view>
+      <view class="ui-list-item-address">
+      {{item.addre}}{{item.address}}
+      </view>
+      </view>
+       <view class='bottom'>
+       <view class='left'>
+       <radio-group  bindchange='radiochange'     class="radio-group" data-idx='{{index}}'>
+       <label class='radio ft-30'>
+       <radio value=''   data-id='{{item.id}}'  class="text-left {{item.sel?'cc':''}}" checked='{{item.sel}}'  >
+    {{ item.sel ?  msg2: msg}}
+      </radio>
+      </label>
+      </radio-group>
+       </view>
+       <view class='right'>
+   <view class="tab-a" bindtap='update' data-id='{{item.id}}'>
+   <image src='/pages/tabs/up.png' mode="aspectFill" lazy-load='true'></image>编辑</view>
+     <view class='tab-b'data-id='{{index}}' bindtap='del' data-lid='{{item.id}}'>
+      <image src='/pages/tabs/del.png' mode="aspectFill" lazy-load='true'></image>删除</view>
+     </view>
+ </view>
+    </view>
+</view>
+ 
+ <view class='add-address' bindtap='addlist'>
+    <image class='add-img' src='/pages/tabs/add.png'></image>新增地址
+</view>

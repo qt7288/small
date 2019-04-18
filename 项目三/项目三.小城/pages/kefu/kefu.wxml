@@ -1,0 +1,17 @@
+<!--pages/kefu/kefu.wxml-->
+<view class='dt'>
+</view>
+<view class="as"><text class='cc'>欢迎用户致电咨询</text>
+</view>
+
+<view class='map'>
+<button bindtap='powerDrawer' data-statu='open'>
+<image src='/pages/tabs/1.png' mode='aspectFill' lazy-load></image>000-00000</button>
+</view>
+<!--mask黑层-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画，弹出-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+<!--drawer content-->
+</view>

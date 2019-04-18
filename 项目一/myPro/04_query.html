@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<title>最高权限-用户详情-修改表</title>
+<style>
+	*{
+		margin: 0;padding: 0;
+	}
+	body{
+		background:url(img/wx/03.jpg);
+		width: 100%;
+		height: 100%;
+	}
+	#updateQ h3{
+		text-align: center;
+	}
+	#updateQ{
+		position: relative;
+		margin:10rem auto;
+		width:40rem;
+	}
+	#updateQ input{
+		width: 100%;
+		height: 2rem;
+		border-radius: 5px;
+		border:1px solid rgba(14, 238, 238, 0.555);
+		margin-bottom: 10px;
+	}
+	#updateQ button{
+		width: 100%;
+		height: 2rem;
+		border-radius: 5px;
+		border:1px solid rgba(14, 238, 238, 0.555);
+	}
+	#man,#woman{
+		width:1rem !important;
+	}
+</style>
+<meta charset="utf-8"/>
+</head>
+<body onload="getrequest()">
+<!-- 	<input type="text" id="id">
+	<button onclick="getInfo()">查询</button> -->
+	<div id="updateQ">
+	<h3>update</h3>
+	<div>
+		<p>登录名称：</p> 
+		<input type="text" id="uname">
+	</div>
+	<div>
+		<p>登录密码：</p>
+		<input type="text" value="" id="upwd" placeholder="输入新的密码">
+	</div>
+	<div>
+		<p>用户邮箱:</p>
+		<input type="text" id="email">
+	</div>
+	<!-- <div>
+			头像位置：<input type="file" id="timg">
+	</div> -->
+	<div>
+		<p>个性签名:</p>
+		<input type="text" id="ctime">
+		</div>
+	<div>
+		<p>用户性别：</p>
+		<input type="radio" id="man" name="gender" value="1"><label for="man">男</label>
+		<input type="radio" id="woman" name="gender" value="0"><label for="woman">女</label>
+	</div>
+	<p>用户id：</p>
+	<input type="text" id="id">
+	<br>
+	<button onclick="update()" value="">点击修改</button>
+	
+</div>
+</body>
+<script>
+//查询修改
+		function getInfo(idd){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						console.log(result);
+						if(result=="1"){
+							alert('没有查询到用户信息');return;
+							}else if(result==0){
+							alert('id');return;
+							}
+					var user=JSON.parse(result)[0];
+						console.log(user);
+						id.value=idd;
+
+					uname.value=user.uname;
+					upwd.value=user.upwd;
+					email.value=user.email;
+					// timg.value=user.timg;
+					ctime.value=user.ctime;
+					if(user.gender=="0"){
+						woman.checked=true;
+					}else if(user.gender=="1") man.checked=true;
+				}	
+			};
+			var url="/myPro/query?id="+idd;
+			xhr.open("get",url,true);
+			xhr.send();
+		}
+	
+		function getrequest(){
+			var url=location.search;
+			if(url.indexOf("?")!=-1){
+				var str=url.substr(1);
+				var strs=str.split("=");
+			}
+			getInfo(strs[1]);
+		}
+
+//修改
+	function update(){
+
+	var xhr=new XMLHttpRequest();
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4 && xhr.status==200){
+			var result=xhr.responseText;
+		
+		if(result=="1"){
+				alert("修改成功!")
+				window.location.href="02_list.html";
+		}
+	}
+	};
+		var url="/myPro/userUpdate";
+		xhr.open("post",url,true);
+		var gender="";
+			if(man.checked){
+				gender="1";
+			}else{
+				gender="0";
+			}
+		
+		var formdata="uname="+uname.value+"&upwd="+upwd.value+
+		"&email="+email.value+"&ctime="+ctime.value+"&gender="+gender+"&id="+id.value;
+		console.log(formdata);
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xhr.send(formdata);
+}
+</script>
+</html>

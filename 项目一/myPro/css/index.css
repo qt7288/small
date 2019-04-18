@@ -1,0 +1,162 @@
+﻿/* 本页包含所有总体样式 */
+*{margin: 0;
+    padding: 0;}
+html,body{width: 100%;
+    height:100%;
+    cursor:url(../img/a.cur),default;
+}
+a,button{
+    cursor:url(http://taotao2019.applinzi.com/Pointer/pointer/LinkSelect.cur),default;
+}
+div,p,span{
+    cursor:url(http://taotao2019.applinzi.com/Pointer/pointer/LinkSelect.cur),default;
+}
+h1,h2,h3,input,textarea{
+    cursor:url(http://taotao2019.applinzi.com/Pointer/pointer/TextSelect.cur),default;
+}
+body{
+    background-color:rgb(255, 255, 255);
+    background: url(https://taotao2019.applinzi.com/img/index.jpg) no-repeat fixed;
+    background-size:100%;
+    background-position: 0 100%;
+}
+ul{list-style: none;}
+a{text-decoration: none;}
+/* body\heml\* */
+.bg-dark{background-color:black;}
+.bg-white{background-color:white;}
+.bg-qjt{background-color:transparent;}
+/* 背景颜色 */
+.f1{font-size:1rem;}
+.f2{font-size:2rem;}
+.f3{font-size:3rem;}
+.f4{font-size:4rem;}
+/* 字体统一 */
+/* ▲▲按钮 */
+.page{
+    width:3rem;
+    height:2rem;
+    box-shadow: 5px 5px 5px black;
+    background-color:rgb(59,59,59);
+    color: #fff;
+    position: absolute;
+    border:0;
+    border-radius: 5px;
+    user-select: none;
+    transition: .3s;
+}
+/*  */
+.page:hover{
+    background-color:rgb(190, 178, 178);
+}
+/* 下 */
+#hye{
+    top: 130px;
+}
+/* 上 */
+#tye{
+   top:45px;
+}
+#count{
+    top:90px;
+}
+button{
+    outline: none;
+}
+input{
+    outline: none;
+}
+
+.Reward:hover::after{
+    content:url(../img/wx/010.jpg);
+    left:4rem;
+    width: 10rem;
+    overflow: hidden;
+    height:10rem;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    clear: both;
+    box-shadow: 5px 5px 5px rgb(114, 114, 114);
+    border-radius: 5px;
+    transform: rotateY(0deg);
+    display: block;
+    transform: translateY(-5rem);
+}
+.Reward::after{
+    content:"假装有图片";
+    left:4rem;
+    width: 10rem;
+    height:10rem;
+    display: none;
+    transform:translateY(0);
+    transition: .5s;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    clear: both;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+canvas{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .12;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+/* 加载动画 */
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    font-size:10px;
+    /* bottom: 0; */
+    height:5%;
+    width:100%;
+    background: rgba(0, 0, 0, 0.288);
+    z-index:998;
+    box-shadow: 0 5px 10px black;
+    border-radius:5px;
+    border-top-left-radius: 0;
+    border-top-right-radius:0; 
+    color:#fff;
+    justify-content: center;
+    align-items: center;
+    animation: loading 2s ease;
+    }
+    @keyframes loading{
+        0%{transform: translateY(-10rem)}
+        20%{transform: translateY(0rem)}
+        80%{transform: translateY(0rem);opacity: 1;}
+        100%{transform: translateY(-10rem);opacity: 0;}
+    }
+    .loading.active {
+        display: flex;
+    }
+    .loading img{
+        height: 2rem;
+    }
+.card{
+    background: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    border:2px solid #ffffff5e;
+
+    box-shadow: 0px 2px 5px #cacfd85e inset;
+}
+.card:hover{
+    background: #9ec1ff5e;
+    box-shadow: 0px 2px 5px #78a6f35e inset;
+}
+
+.rain{
+    position: fixed;
+   
+}
+.rain iframe{
+    display: block;
+    background: transparent;
+}

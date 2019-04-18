@@ -1,0 +1,155 @@
+/* pages/order/order.wxss */
+
+.add{
+  width:100%;
+  background:#fff;
+  position:relative;
+  border:2px solid #ddd;
+  font-size:14px;
+  font-family: UICTFontTextStyleBody;
+}
+.addre,tt{
+  position:absolute;
+  margin-top:29rpx
+}
+.addre view:first-child{
+  margin-left:15rpx;
+}
+.addre view:last-child{
+  padding-top:22rpx;
+  margin-left:15rpx;
+
+}
+.add image{
+width:50rpx;
+height:50rpx;
+margin-left:661rpx;
+margin-top:54rpx;
+}
+.content{
+  width:100%;
+  position:absolute;
+  margin-top:20rpx;
+  border-top:1px solid #ddd;
+}
+.top{
+width:100%;
+height:80rpx;
+border-bottom:1px solid #ddd;
+line-height: 80rpx;
+font-size: 24rpx;
+
+}
+.show{
+  width:100%;
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  display:block;
+  height:250rpx;
+}
+.show image{
+  width:200rpx;
+  height:200rpx;
+  margin-top:27rpx;
+}
+.show span{
+  display:flex;
+}
+.show span:first-child{
+  display:flex;
+ margin-left:222rpx;
+ margin-top:-186rpx;
+}
+.show span:nth-child(2),.show span:nth-child(3){
+  margin-left:222rpx;
+  font-size: 14px;
+ color:rgb(107, 98, 98);
+}
+.show span:nth-child(2){
+  margin-top:12rpx
+}
+.show span:nth-child(3){
+  margin-top:11rpx
+}
+.show span:last-child{
+  margin-top:-29rpx;
+  color:red;
+  margin-left:623rpx;
+}
+.cc{
+width:100%;
+height:100rpx;
+display:inline-block;
+border-top:1px solid #ddd;
+}
+.cc span:first-child{
+  text-align:left;
+  font-size: 24rpx;
+  line-height: 100rpx;
+}
+.cc span:last-child{
+font-size: 20rpx;
+line-height: 100rpx;
+color:#000;
+
+}
+.bottom{
+width:100%;
+bottom:0;
+position:fixed;
+height:108rpx;
+border:1px solid #ddd;
+
+}
+.bottom span:first-child{
+ width:70%;
+display:inline-block;
+color:#f00;
+margin-left:24rpx;
+margin-top:32rpx;
+}
+.bottom span:last-child{
+width:30%;
+background:red;
+height:75rpx;
+color:#fff;
+text-align:center;
+padding-top:14rpx;
+display:block;
+margin-left:521rpx;
+margin-top:-65rpx;
+
+
+}
+/* 弹窗 */
+.tanchuang{
+   bottom:0;
+    position:fixed;
+    width:100%;
+    height:660rpx;
+    background:#fff;
+    /* opacity:0.6; */
+     /* display:none;  */
+    z-index:2;
+    border:1px solid #eee;
+
+}
+.tc-title .qx{
+  margin-left:10rpx;
+margin-top:-3rpx;
+font-size:29px;
+display:block;
+border-bottom:1px solid #eee;
+height:120rpx;
+}
+.tc-title view:nth-child(2){
+margin-left:204rpx;
+margin-top:20rpx;
+}
+.tc-title span:last-child{
+margin-left:246rpx;
+margin-top:16rpx;
+color:red;
+font-size:28px;
+display:block;
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	  function pad2(n) { return n < 10 ? '0' + n : n }
+
+function generateTimeReqestNumber() {
+    var date = new Date();
+    return date.getFullYear().toString() + pad2(date.getMonth() + 1) + pad2(date.getDate()) + pad2(date.getHours()) + pad2(date.getMinutes());
+  }
+var rand = Math.floor(Math.random() * 900) + 100;
+var order_id = generateTimeReqestNumber() + rand;
+console.log(rand)
+console.log(order_id)
+	</script>
+</body>
+</html>

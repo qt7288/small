@@ -1,0 +1,27 @@
+<!--pages/class/class.wxml-->
+<view class='search'>
+<input type='text' placeholder='搜索' bindtap='search'></input>
+</view>
+<view class='clear'></view>
+<view class='content'>
+<view class='left'>
+<view wx:for='{{list1}}' wx:key="i" class="l-list {{state==index?'l-list1':''}}" bindtap='change' data-key='{{index}}'>
+ <text catchtap='show' data-id='{{item.cid}}' class=" {{state==index?'rlist-item':''}}" data-key='{{index}}' bindtap='change'>{{item.cname}}</text>
+</view>
+</view>
+
+<view class='right'>
+<view wx:for='{{list3}}' class='r-list' wx:key="i">
+<view class='rlist-item'>
+<image src='http://127.0.0.1:3000/{{item.img_url}}' bindtap='detail' data-id='{{item.sid}}'></image>
+<text>{{item.sname}}</text>
+</view>
+</view>
+<view wx:for='{{list}}' class='r-list' wx:key="i">
+<image src='http://127.0.0.1:3000/{{item.src1}}' bindtap='detailt' data-id='{{item.did}}' ></image>
+<text>{{item.dname}}</text>
+</view>
+</view>
+
+</view>
+

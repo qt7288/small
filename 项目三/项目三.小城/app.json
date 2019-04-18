@@ -1,0 +1,60 @@
+{
+  "pages": [  "pages/cart/cart",
+    "pages/class/class",
+    "pages/index/index",
+    "pages/first/first",
+    
+    "pages/order/order",
+    "pages/search/search",
+    "pages/address/address",
+    "pages/addresslist/addresslist",
+   
+    "pages/detail/detail",
+    "pages/self/self",
+    "pages/kefu/kefu",
+    "pages/logs/logs",
+    "pages/wode/wode",
+   
+    "pages/updateadd/updateadd",
+    "pages/rorder/rorder"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#CCFF99",
+    "navigationBarTitleText": "猪猪杂货",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "backgroundColor": "#CCFF99",
+    "selectedColor": "#CCFF99",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "pages/tabs/home.png",
+        "selectedIconPath": "pages/tabs/home-sel.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "",
+        "iconPath": "pages/tabs/3.png",
+        "selectedIconPath": "pages/tabs/3-2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "",
+        "iconPath": "pages/tabs/cart-up.png",
+        "selectedIconPath": "pages/tabs/cart-down.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "",
+        "iconPath": "pages/tabs/center.png",
+        "selectedIconPath": "pages/tabs/center-sel.png"
+      }
+    ]
+  }
+}

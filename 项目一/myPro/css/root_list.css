@@ -1,0 +1,226 @@
+	*{
+		margin: 0;padding: 0;
+	}
+	body{
+		width: 100%;
+		background: url(https://taotao2019.applinzi.com/img/blue.jpg) repeat fixed;
+    	background-size:100%;
+    	background-position: 0 100%;
+	}
+	h1{
+		/* text-align: center; */
+		position: relative;
+		display: block;
+		color: white;
+		font-size:16px;
+	}
+	h1>p{
+		font-size: 5px;
+		color:red;
+	}
+	table{
+		width:100%;
+		position: relative;
+        text-align:center;
+        border:rgb(12, 206, 196);
+	}
+	th{
+		background: rgb(39, 108, 144);
+		color:white;
+		height: 2rem;
+		border:0;
+	}
+	th:hover{
+		background: red;
+	}
+	td{
+		background-color:rgb(216, 210, 210);
+		border:1px solid rgb(179, 178, 178);
+	}
+	td:hover{
+		background: green;
+		color:white;
+	}
+	a{
+		text-decoration:none;
+		width: 50%;
+		display: inline-block;
+	}
+	.list{
+		color:rgb(240, 240, 240);
+		background: #008000;
+		border:0;
+		border-bottom:1px solid black;
+		border-right:1px solid black;
+		box-sizing: border-box;
+	}
+	.list:hover{
+		background:white;
+		color:black;
+	}
+
+	#left{
+		width:100%;
+		position: relative;
+		margin-top: 0;
+		transition: 2s;
+		overflow: hidden;
+	}
+	#right{
+		overflow-x:hidden;
+		width: 100%;
+		position:relative;
+		right: 0;
+		background: rgba(99, 94, 94, 0.13);
+		top: 0;
+		margin-top: 0;
+		/* transition: 1s; */
+		/* border-radius: 10px; */
+		color: #fff;
+		z-index: 1000;
+	}
+	.rootH{
+		text-align: center;
+		font-size: 16px;
+	}
+	.rootHp{
+		text-align: left;
+	}
+	/* root_insert */
+	#root_insert,#upDate{
+		position: relative;
+	}
+	.insert_h,.upDate-h{
+		background: #f2f2f2;
+		height: 2rem;
+		box-sizing:border-box;
+		user-select: none;	
+		line-height:2rem;
+		box-sizing: border-box;
+		border-bottom:1px solid rgb(184, 184, 184);
+	}
+	.insert_h{
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.upDate_h{
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+	.upDate-h p{
+		user-select: none;
+	}
+	.insert_h p,.upDate-h p{
+		position: relative;
+		color:rgb(158, 158, 158);
+		margin-bottom: 1rem;
+	}
+	.Add,.modify{
+		display:none;
+	}
+	.Add,.modify{
+		width: 100%;
+		box-sizing: border-box;
+		background: #84848473;
+		box-shadow: 0 1px 2px rgb(143, 142, 142);
+	}
+	.Add input,.modify input{
+		width: 80%;
+		height: 2rem;
+		border:0;
+		outline-width:5px; 
+		left: 5%;
+		margin-bottom: 1px;
+		border-radius: 5px;
+		text-align: left;
+		position: relative;
+		padding-left: 10px;
+		color: rgb(129, 122, 122);
+	}
+	.Add p,.modify p{
+		padding-left:2rem;
+		height: 2rem;
+		line-height: 2rem;
+		display: block;
+		width: 10%;
+		left: 5%;
+		font-size: 10px;
+		position: relative;
+	}
+	.Add input:last-child{
+		width: 80%;
+		left: 5%;
+		background: rgb(168, 168, 168);
+		box-shadow: 2px 2px 5px rgb(88, 88, 88);
+		border:0;
+		outline: none;
+		position: relative;
+		text-align: center;
+		margin-bottom: 2rem;		
+	}
+	.Add input:nth-child(3){
+		position: absolute;
+		width: 20%;
+	}
+	/* 上传图片 */
+	#image-f{
+		width: 10rem;
+		box-sizing: border-box;
+		position:relative;
+		margin: 0 auto ;
+		left: -40%;
+}
+.btn2{
+	text-align: center !important;
+	background: rgb(134, 134, 134);
+	box-shadow: 2px 2px 5px rgb(122, 122, 122);
+}
+.modify{
+	display: none;
+	margin-bottom: 2rem;
+	box-shadow: 0 0 0 transparent;
+}
+.content-text{
+	width: 80%;
+	position: relative;
+	left: 5%;
+	border-radius: 5px;
+	height: 15rem !important;
+}
+.btn3{	
+	background: rgb(104, 104, 104);
+	text-align: center !important;
+	box-shadow: 2px 2px 5px rgb(172, 172, 172);
+}
+
+/* middle */
+#middle{
+	position: fixed;
+	width:100%;
+	z-index:1100;
+	background: black;
+	height:2rem;
+	border:1px solid white;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+	line-height: 2rem;
+}
+.middle-left:hover{
+	background:rgb(243, 112, 112);
+}
+.middle-right:hover{
+	/* background: yellow; */
+}
+.middle-left,.middle-right,.middle-center{
+	width: 33%;
+	transition: all 0.2s;
+	position: absolute;
+	user-select: none;
+}
+.middle-right{
+	right: 0;
+}
+.middle-center{
+	right: 33%;
+}

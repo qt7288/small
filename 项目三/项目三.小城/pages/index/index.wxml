@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="container1">
+  <view class='slider'>
+    <swiper autoplay interval="3500" indicator-dots="{{true}}">
+        <swiper-item>
+            <image src="http://pic44.photophoto.cn/20170716/1190119101803400_b.jpg" mode="aspectFill" lazy-load='true'/>
+        </swiper-item> 
+        <swiper-item>
+            <image src="http://pic.51yuansu.com/pic3/cover/01/08/83/59031359c35e7_610.jpg" mode="aspectFill" lazy-load='true'/>
+        </swiper-item>
+        <swiper-item>
+            <image src="http://pic17.photophoto.cn/20101005/0035035587124187_b.jpg" mode="aspectFill" lazy-load='true'/>
+        </swiper-item>
+    </swiper>
+  </view>
+
+</view>
+  <view class='cc'>
+  <text class='cc-text'>精品水果</text>
+
+</view>
+<view class='divider'></view>
+<!-- 水果展示 -->
+<view class='divider'></view>
+<view class='wd'>
+  <view class='wd-wraper'  wx:for='{{list}}' wx:key="i">
+    <image src='http://127.0.0.1:3000/{{item.img_url}}' bindtap='detail' data-id='{{item.sid}}'></image> 
+      <text class='wd-text'>{{item.sname}}</text>
+      <text class='wd-text' style='color:red'>￥{{filters.toFix(item.price)}}</text>
+  </view>
+</view>
+<!-- 精品干果 -->
+ <view class='cc'>
+  <text class='cc-text'>精品干果</text>
+</view>
+<!-- 干果展示 -->
+<view class='divider'></view>
+<view class='wd'>
+  <view class='wd-wraper' wx:for='{{list1}}' wx:key="i">
+    <image src='http://127.0.0.1:3000/{{item.img_url}}' bindtap='detail' data-id='{{item.sid}}'></image> 
+      <text class='wd-text'>{{item.sname}}</text>
+      <text class='wd-text' style='color:red'>￥{{filters.toFix(item.price)}}</text>
+  </view>
+</view>
+
+ 

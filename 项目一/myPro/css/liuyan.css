@@ -1,0 +1,378 @@
+#liuyanban{
+    width:95%;
+    position: relative;
+}
+/* 留言板主体 */
+.lyb-header,.lyb-body{
+    width: 100%;
+    position: relative;
+}
+body{
+    background-color:rgb(255, 255, 255);
+    background: url(https://taotao2019.applinzi.com/img/inedx01.jpg) no-repeat fixed;
+    background-size:100%;
+    background-position: 0% 100%;
+}
+.lyb-header{
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    text-align:left;
+    line-height:1.5rem;
+    color:#fff;
+}
+.lyb-header>p{
+    height:1.5rem;
+    background-color:#f5f6fa;
+    width:100%;
+    border:0;
+    color: rgb(77, 71, 71);
+}
+.lyb-body{
+    box-sizing: border-box;
+    /* height:6rem; */
+}
+.lyb-body>p{
+    color: #fff;
+    font-size: 5px;
+    text-align: left;
+    padding:5px;
+}
+.lyb-side{
+    width: 100%;
+    height: 2rem;
+}
+.lyb-side>button{
+    width: 100%;
+    border:0;
+    height: 2rem;
+    font-size:6px;
+    border-radius: 5px;
+    color: #fff;
+    background-color:royalblue;
+}
+.lyb-footer{
+    width: 90%;
+    height: 2rem;
+    background-color:rgb(255, 255, 255);
+    border-radius:5px;
+}
+
+.foot-h{
+    display: none;
+}
+/* 留言板标题 */
+#lyb-title{
+    width:95%;
+    text-align: center;
+    background:rgba(59, 59, 59, 0);
+    height: 3rem;
+    font-size: 0.8rem;
+    line-height: 3rem;
+    position:relative;
+    transition: 1.5s;
+    color: #fff;    
+    box-sizing: border-box;
+    border:1px solid rgb(255, 255, 255);
+    border-left: 0;
+    border-right: 0;
+    border-radius: 10px;
+}
+#lyb-title:hover{
+    background:linear-gradient(to right,transparent 0%,#8790d3 50%,transparent);
+    border:1px solid white;
+    border-top:0;
+    border-bottom:0;
+}
+#lyb-title::before,#lyb-title::after{
+    content: "";
+    width:50%;
+    height:100%;
+    top: 0px;border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    transition: 1s;
+}
+#lyb-title::before{
+    border-right: 0;
+    left: 0;
+    /* 靠左 */
+}
+#lyb-title::after{
+    right: 0;
+    border-left:0;
+    /* 靠右 */
+}
+#lyb-title:hover::after{
+    right: 20%;
+    border:1px solid rgb(255, 255, 255);
+    border-left:0;
+}
+#lyb-title:hover::before{
+    left: 20%;
+    border:1px solid rgb(255, 255, 255);
+    border-right:0;
+}
+#ly-input{
+    margin-top: 1rem;
+    position: relative;
+    width: 95%;
+    box-sizing: border-box;
+}
+#ly-input input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 6rem;
+    border: 1px solid rgb(134, 134, 134);
+    border-radius: 5px;
+    padding: 6px;
+    box-shadow: 0px 2px 5px rgba(59,59,59,.5);
+}
+/* 留言板的input操作系统 */
+#ly-input button{
+    box-sizing: border-box;
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+    background-color:#4a4b58;
+    border:0;
+    margin-bottom:1rem;
+    transition: .5s;
+    box-shadow: 0px 5px 10px black;
+}
+#ly-input button:hover{
+    background-color:rgb(58, 89, 180);
+}
+/* header */
+.lyb-img{
+    width: 95%;
+    overflow: hidden;
+    height:30rem;
+    border-radius:10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px black;
+    padding: 5px;
+}
+.lyb-img>img{
+    width:100%;
+}
+.lyb-subtitle{
+    width: 95%;
+    background-color:transparent;
+    border:0;
+    position: relative;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 5px;
+}
+.lyb-subtitle>p{
+    padding-left:20px;
+    color: #fff;
+}
+#header-h>ul>li:nth-child(4)>a{
+    background-color: transparent;
+}
+#header-h>ul>li:first-child>a{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+.pay{
+    width: 95%;
+    position: relative;
+    height: 4rem;
+    background-color:transparent;
+}
+.pay>button{
+    /* display: inline-block; */
+    width:28%;
+    margin: 0;
+    padding: 0;
+    border:0;
+    position: relative;
+    left:20%;
+    top: 1rem;
+    margin: 0 auto; 
+    border-radius: 5px;
+    height: 2rem;
+    background-color:#000;
+    color: #fff;
+    transition:.3s;
+}
+.pay>button:hover{
+    background-color: rgb(28, 195, 218);
+}
+
+/* lyb-header */
+.lyb-header span{
+    color: rgb(70, 34, 34);
+    font-size: 5px;
+    right: 0;
+    position: absolute;
+    padding-right:10px;
+}
+.lyb-header p{
+    color:black;
+    font-size: 5px;
+    padding-left: 10px;
+}
+.ly-hy{
+    display: block;
+    box-sizing: border-box;
+    width: 95%;
+    height: 5rem;
+}
+.ly-hy button{
+    box-sizing: border-box;
+    width: 100%;
+    height: 4rem;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #d1d1d1;
+    border:0;
+    margin-bottom:.1rem;
+    float: left;
+}
+.ly-hy button:last-child{
+    top: 1rem;
+    background-color: #9a9a9e;
+    box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5);
+    margin-bottom:5rem;
+}
+/* 评论头像 */
+/* user-img */
+#liuyanban{
+    border-radius: 10px;
+    overflow: hidden;
+}
+#liuyanban>div:nth-child(even){
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 2px rgba(59,59,59,.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#liuyanban>div:nth-child(odd){
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+#toTop{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    background-color:rgb(59,59,59);
+    box-shadow: 5px 5px 5px black;
+    bottom:20%;
+    border-radius: 10px;
+    left:0%;
+}
+#toTop img{
+position: relative;
+margin: 0 auto;
+user-select: none;
+}
+/* 时间 */
+.s-l{
+    top: 0rem;
+}
+/* 测试提示框 */
+#Tips{
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    box-sizing: border-box;
+    height:3rem;
+    color: #fdd;
+    text-align:center;
+    line-height: 3rem;
+    top: 2rem;
+    z-index: 100;
+    border-radius: 10px;
+    background: rgba(99, 99, 99,.85);
+    /* display: block; */
+    display: none;
+}
+/* shareTo */
+#shareTo{
+    position:absolute;
+    width:30%;
+    border-radius: 5px;
+    z-index: 1000;
+    top:52rem;
+    left:25%;
+    background:url(../img/wx/blue.jpg);
+    box-sizing: border-box;
+    overflow: hidden;
+    border:1px dashed white;
+    transition: all .5s;
+    transform: rotateX(90deg);
+}
+#shareTo ul{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+#shareTo a{
+    color: #fff;
+}
+#shareTo li{
+    color: #fff;
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 3rem;
+}
+
+/* 响应兼容 */
+@media screen and (max-width:1024px){
+    .lyb-img{
+        height: 12rem;
+    }
+    .cfr-b1{
+        height: 20rem;
+    }
+    .cfr-b1-b{
+        height: 15rem;
+    }
+    .cfr-b1-h{
+        height: 3rem;
+        line-height: 3rem;
+    }
+    #section-h{
+        width: 95%;
+        right: 0;
+    }
+    section{
+        width: 90%;
+    }
+    #shareTo{
+        left: 20%;
+        top: 34rem;
+    }
+    #shareTo li{
+        line-height: 3rem;
+    }
+    #header-h{
+        height: 65%;
+    }
+    #header-h>ul>li{
+        margin-top: 1rem;
+    }
+}
+/* 打赏 */
+/* #Reward{
+    position: absolute;
+    box-sizing: border-box;
+    border:1px solid black;
+    width: 60%;
+    left: 20%;
+    height: 14rem;
+    display: block;
+    top:30rem;
+    z-index: 1000;
+    background: #000;
+} */

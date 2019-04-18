@@ -1,0 +1,51 @@
+
+ <view> 
+<view class='ee'>
+<view class='cc'>
+</view>
+<view class="show">
+
+<label class='checkbox ft-30' wx:for='{{list}}' wx:key="i">
+<checkbox value='{{item.cprice}}' class='text-left flex flex-vc pd-lr30' data-id='{{item.id}}' data-i="{{index}}" catchtap='rad' checked='{{item.ck}}' data-price='{{item.cprice}}'>
+<image src='{{item.src}}' mode="aspectFill" lazy-load='true'></image>
+<view class="ya">
+<span>{{item.dname}}</span>
+<span>斤：{{item.price}}/斤</span>
+<span>x{{item.count}} 斤</span>
+<span>￥{{item.cprice}}</span>
+</view>
+</checkbox>
+</label>
+
+ </view> 
+ </view>
+
+
+ </view>  
+ <view wx:if="{{showModalStatus}}">
+  <view class="tc-tab {{isHidden == 1 ? 'display-block':'display-none'}}"  > 
+ <view class='tab-f'>
+<label class='checkbox ft-30' ><checkbox value='' checked='{{sell_all}}' class='text-left flex flex-vc pd-lr30' bindtap='selectAll' >
+<span>全选</span>
+<span>总计:￥{{numbers}}</span>
+</checkbox>
+</label>
+</view>
+ <view class="tab-a" bindtap='show'>编辑</view>
+ <view class='tab-b' data-id='{{index}}' data-did='{{item.did}}' checked='{{item.did}}'>结算</view>
+ </view>
+ </view>
+ <view wx:else>
+ <!-- 点击切换 -->
+ <view class="tc-tab {{isHidden == 1 ? 'display-none':'display-block'}}"> 
+ <view class='tab-f'>
+<label class='checkbox ft-30' ><checkbox class='text-left flex flex-vc pd-lr30' bindtap='selectAll' checked='{{sell_all}}'>
+<span>全选</span>
+<span>总计:￥{{numbers}}</span>
+</checkbox>
+</label>
+</view>
+ <view class="tab-a" bindtap='change'>完成</view>
+ <view class='tab-b' bindtap='del' data-id='{{item.id}}'>删除</view>
+ </view>
+ </view>

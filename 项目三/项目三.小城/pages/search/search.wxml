@@ -1,0 +1,11 @@
+<!--pages/search/search.wxml-->
+<view class='search'>
+<form bindsubmit='searchProduct'>
+<input type='text' placeholder='搜索商品名称' name='key'></input>
+<button form-type='submit'>搜索</button>
+</form>
+</view>
+<view wx:for='{{list}}' class='cc' wx:key="i">
+ <image src='http://127.0.0.1:3000/{{item.img_url}}' bindtap='detail' data-id='{{item.sid}}'></image>
+ <span>￥{{item.price}}</span>
+</view>

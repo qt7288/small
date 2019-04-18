@@ -1,0 +1,19 @@
+/* pages/self/self.wxss */
+.t{
+ font-family: 仿宋;
+ font-size:20px;
+ color:#faa;
+}
+
+.bg-text{
+ width:184px;
+height:42px;
+line-height:32px;
+background-color:#faa;
+text-align:center;
+border-radius:26rpx;
+color:white;
+font-size:16px;
+padding-top:6px;
+margin-top:20px;
+}

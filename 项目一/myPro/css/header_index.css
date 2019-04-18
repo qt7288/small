@@ -1,0 +1,243 @@
+﻿header{
+    width: 100%;
+    height:16rem;
+    margin: 0 auto;
+    z-index: 100;
+    position: relative;
+    transition:all 1s;
+}
+header:hover{
+    box-shadow: 0 1px 5px rgba(255, 255, 255,0.5);
+}
+@keyframes headerM{
+    from{height: 30rem;}
+    to{height:16rem;}
+}
+/* header继承父元素的宽度、设置高度、颜色、以及其他.... */
+#header-h{
+    width:3rem;
+    top: 5%;
+    border-radius: 10px;
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+    height:36rem;
+    left: 2px;
+    color:rgb(0, 0, 0);
+    margin-right:0rem;
+    line-height: 2rem;
+    position: fixed;
+    background:rgba(59, 59, 59,.5);
+    border:0;
+    font-size:10px;
+    z-index: 999;
+    transition:all .3s linear;
+    box-shadow: 2px 2px 10px rgba(243, 242, 242, 0.548),-2px 2px 5px black;
+
+}
+
+/* borderStyle */
+#header-h:after,#header-h:before{
+    content:'';
+      width:3rem;
+      height:36.4rem;
+      /*background:white;*/
+      box-sizing:border-box;
+        border:1px solid rgb(129, 128, 128);
+        transition: all .5s;
+      position:absolute;
+   animation: headerHb 10s linear infinite;
+   }
+   #header-h:before{
+    animation-delay:-5s;
+   }
+  @keyframes headerHb {
+      0%{
+          clip: rect(0,3rem,2px,0);
+          box-shadow: 0 0 5px white inset;
+      }
+     30%{
+          clip:rect(0px,2px,36.4rem,0);
+          box-shadow: 0 0 5px white inset;
+       }
+     50%{
+          clip:rect(36rem,3rem,36.4rem,0);
+          box-shadow: 0 0 5px white inset;
+       }
+       70%{
+          clip:rect(0,3rem,36.4rem,2.9rem);
+          box-shadow: 0 0 5px white inset;
+       }
+       100%{
+            clip:rect(0,3rem,2px,0);
+            box-shadow: 0 0 5px white inset;
+       }
+      }
+
+
+#header-h:hover::after{
+    border-color: rgb(255, 255, 255)
+}
+#header-h:hover::before{
+    border-color: rgb(255, 255, 255)
+}
+#header-h:hover #header-b{
+    display: none;
+}
+
+.mfLogo:hover li{
+    display: none;
+}
+.mfLogo{
+    transition:0.2s;
+}
+.mfLogo:hover{
+    transform: rotate(10deg);
+    /* animation: mfLogo 0.5s linear; */
+}
+@keyframes mfLogo{
+    0%{transform: translateY(0)}
+    25%{transform: translateY(0.5rem)}
+    50%{transform: translateY(-0.5rem)}
+    75%{transform: translateY(0.5rem)}
+    100%{transform: translateY(0)}
+}
+/* header-h继承父元素的高度、设置宽、高、居中、颜色 */
+#header-h>ul{
+    position: absolute;
+    width: 100%;
+    top:5rem;
+    text-align: center;
+    animation: headerul 1s linear;
+}
+#header-h>ul>li{
+    margin-top:2rem;
+    width: 100%;
+    transition: .5s;
+}
+#header-h>ul>li:hover{
+    /* transform: translateX(0.5rem); */
+    color: rgba(0, 0, 0, 0.404);
+    border-radius: 5px;
+    background:linear-gradient(to bottom,rgba(59,59,59,.5) 0% ,rgb(107, 107, 107) 50% ,rgba(59,59,59,.5) 100%);
+}
+#header-h>ul>li>a{
+    color: white;
+}
+@keyframes headerul{
+    from{left: -5rem;}
+    to{left:0rem;}
+}
+/* ul*li */
+#header-b{
+    color:rgb(255, 255, 255);
+    position: absolute;
+    width:60%;
+    left:20%;
+    border-radius:20px;
+    /* background:linear-gradient(to bottom,rgba(59,59,59,0) 0% ,rgba(236, 236, 236, 0.2) 50% ,rgba(59,59,59,0) 100%); */
+    text-align: center;
+    margin-top: 8rem;
+    display: block;
+    transition:all .5s;
+}
+#header-b>h1{
+    transition: .5s;
+    font-size:1rem;
+}
+#header-b>h1::after{
+    content:"";
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 1px;
+    background-color:rgb(248, 248, 248);
+    position: relative;
+    top:0;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: 1s;
+    background-position: 50% 50%;
+    animation: hr 1s linear;
+}
+@keyframes hr{
+    from{width: 0;}
+    to{width: 100%;}
+}
+#header-b>h1:hover::after{
+    width: 0; 
+}
+
+#header-b>h2{
+    transition: .5s;
+    font-size: .8rem;
+}
+#header-b>h2:hover{
+    transform: rotateY();
+}
+/* header-b */
+.dnone:hover .dul{
+    display:inline-block;
+}
+/* dnone */
+.dul{
+    display:none;
+    text-align: center;
+    background: transparent;
+    width: 100%;
+    left:-10px;
+    color: rgb(138, 132, 132);
+    position: relative;
+    margin-top: 1rem;
+}
+.dul>li{
+    cursor: pointer;
+    height: 2rem;
+    clear: float;
+    line-height: 2rem;
+}
+/* .dul */
+.dul>li:hover{
+    background-color:rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+.mfLogo{
+    width:2rem;
+    position: relative;
+    height: 2rem;
+    bottom:1rem;
+}
+/* 
+注释：
+页头操作 
+*/
+#homepage{
+    width: 60%;
+    left: 20%;
+    height:4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgba(255, 255, 255, 0.658);
+    color: rgb(0, 0, 0);
+    animation:reminder 4s linear;
+    animation-delay: 3s;
+    position: fixed;
+    transform: translateY(-5rem);
+    z-index: 1000;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    opacity: 0.8;
+}
+#homepage>h1{
+    font-size: 1rem;
+    text-align: center;
+    line-height:4rem;
+}
+@keyframes reminder{
+    0%{transform: translateY(-6rem)}
+    30%{transform: translateY(0rem)}
+    40%{transform: translateY(1rem)}
+    50%{transform: translateY(1rem)}
+    60%{transform: translateY(1rem)}
+    70%{transform: translateY(1rem)}
+    90%{transform: translateY(1rem)}
+    100%{transform: translateY(-6rem)}
+}

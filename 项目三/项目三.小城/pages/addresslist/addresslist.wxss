@@ -1,0 +1,53 @@
+/* pages/addresslist/addresslist.wxss */
+.cc,.c1,.c2,.c3{
+  border-top:1px solid #ddd;
+  width:100%;
+  height:140rpx;
+ display:block;
+ position:relative;
+}
+.cc span:first-child,.c1 span:first-child,.c2 span:first-child,.c3 span:first-child{
+  width:25%;
+  text-align:center;
+  display:inline-block;
+  line-height: 140rpx;
+  font-size:15px;
+  color:#333;
+  position:absolute;
+  left: 0;
+}
+
+.cc span:last-child,.c1 span:last-child,.c2 span:last-child,.c3 span:last-child{
+  width:75%;
+  height: 140rpx;
+  text-align:center;
+  display:inline-block;
+  font-family:UICTFontTextStyleBody;
+  font-size:14px;
+  line-height: 140rpx;
+  position:absolute;
+  right: 0;
+}
+.c3{
+  border-bottom:1px solid #ddd;
+}
+.c4{
+ width:99%;
+height:108rpx;
+position:fixed;
+bottom:0;
+color:#66CD00;
+text-align:center;
+border:1px solid #66CD00;
+margin-left:2rpx;
+border-radius:14rpx;
+font-size:14px;
+
+}
+.c4 span{
+  display:inline-block;
+  padding-top:25rpx
+}
+input{
+  height: 140rpx;
+}

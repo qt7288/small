@@ -1,0 +1,705 @@
+/* 
+    定义页面右侧功能操作面板
+*/
+section{
+    width: 100%;
+    min-height:90rem;
+    position:relative;
+    margin: 0 auto;
+    top:2rem;
+}
+#section-h::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* section继承父元素body的宽高 */
+#section-h{
+    width: 60%;
+    /* height:70rem; */
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+    top: 2rem;
+}
+/* section继承父元素宽.60 */
+#section-f{
+    box-sizing: border-box;
+    height: 5rem;
+    position:fixed;
+    left:0%;
+
+    bottom:25%;
+    margin: 0 auto;
+    animation: page 1s linear;
+}
+@keyframes page{
+    from{bottom:-5rem;}
+    to{button:15%}
+}
+#section-r>ul>li{
+    width: 100%;
+    text-align:left;
+    height: 2rem;
+    line-height: 2rem;
+    box-sizing: border-box;
+    border-bottom:1px dashed white;
+}
+/* section-r */
+.s-r,.s-l{
+    box-sizing: border-box;
+    position:absolute;
+}
+/* 
+    定义左侧面板
+*/
+.s-l{
+    width: 70%;
+}
+
+/* s-l
+    定义右侧面板
+*/
+.s-r{
+    width: 30%;
+    height: 100%;
+    background:rgba(255,255,255,.1);
+    right: 0;
+}
+
+/* s-r */
+/* card模板css属性 */
+.card{
+    width: 98%;
+    height:13rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius:5px;
+    transition: .2s;
+    transition: .3s;
+}
+.card:hover{
+    animation: cardmove .3s ease;
+    box-shadow: 0 0 8px white,0 0 8px white;
+}
+
+#card-f{
+    opacity: 0;
+}
+.card:hover #card-f{
+    height: 2rem;
+    opacity: 1;
+    background-color:rgb(134, 134, 134);
+}
+/* .s-l>.card:first-child:hover{
+    /* transform: translateY(0rem); */
+/* } */
+/* 鼠标移入卡片状态 */
+@keyframes cardmove{
+    /* 0%{}
+    20%{transform: rotate(1deg);}
+    40%{transform: rotate(-1deg);}
+    60%{transform: rotate(1deg);}
+    80%{transform: rotate(-1deg);}
+    100%{} */
+}
+
+.card::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color:#000000;
+    bottom:0;
+    width: 34%;
+    height:1px;
+    border-radius:10px;
+    transition: .5s;
+}
+
+.card:hover::after{
+    content: "";
+    width: 100%;
+}
+
+.card-img{
+    width:15rem;
+    height:8rem;
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    background: rgb(223, 222, 222);
+    box-sizing: border-box;
+    padding:2px;
+    line-height: 4rem;
+    border:1px black transparent;
+    transition: .5s;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card-img>img{
+    width: 100%;
+}
+/* card-img */
+#card-f{
+    width: 100%;
+    height:4rem;
+    transition:.5s;
+    background-color: #7b6c6445;
+    position: absolute;
+    bottom: 0;
+}
+/* card-f */
+.card-r{
+    width:30rem;
+    height:8rem;
+    top: 2rem;
+    position: absolute;
+    right: 20px;
+}
+/* .card-r::after{
+    content: "";
+    width:100px;
+    display: block;
+    height: 5px;
+    background-color:#fff;
+} */
+.c-f-r>span>a{
+    color:white;
+}
+/* 下的a标签 */
+.card-r>h3{
+    font-size:15px;
+    background-color:transparent;
+    border-radius: 2px;
+    padding: 4px;
+    text-align: left;
+    padding-left: 2rem;
+}
+.card-r>h3>span{
+    color:wheat;
+    font-size: 5px;
+    background-color:rgb(26, 218, 224);
+    border-radius: 2px;
+    padding:4px;
+    transition: all .5s;
+}
+.card-r>h3>a{
+    font-size: 10px;
+    color: #fff;
+    font-weight: normal;
+    margin-left: 1rem;
+}
+.card-r>h3>a:hover{
+    color: rgb(106, 255, 205);
+}
+.card-r>h4{
+    font-size:5px;
+    background: transparent;
+    /* color:#5a9fcc; */
+    color:#fa97ae;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+/* card-r */
+.c-f-l,.c-f-r{
+     background: transparent; 
+     display: inline-block; 
+      font-size: 5px;
+      color:white;
+      line-height:2rem; 
+      height: 3rem;
+       width: 50%;
+}
+
+.c-f-l>span{
+    padding-left: 1rem;
+}
+.c-f-r{
+    position: absolute;
+    text-align: right;
+}
+.c-f-r>span{
+   padding-right: 10px;
+}
+/* card移入card底部卡槽 */
+/* .card:hover .c-f-f{
+    height: 1rem;
+} */
+
+/* c-f-l */
+.c-f-b{
+    width: 100%;
+    height: 2rem;
+    background-color:transparent;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+/* c-f-b */
+.cfr-h1,.cfr-b,.cfr-h2,.cfr-b1,.cfr-b2,.cfr-f{
+    width: 100%;
+    height:12rem;
+    position: relative;
+    margin-bottom:1rem;
+    background-color:rgba(154, 141, 135, 0.5);
+    box-sizing: border-box;
+    
+    box-shadow: -1px 3px 2px #8b8c8d;
+    border-top:1px solid rgb(112, 110, 110);
+    border-radius: 10px;
+    color: #fff;
+    user-select: none;
+}
+
+/* cfr-h1 */
+.cfr-h1{
+    height: 8rem;
+    border:0;
+}
+.cfr-h1-h{
+    width: 100%;
+    height:4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 10px;
+}
+.cfr-h1-h>h1{
+    font-size: 5px;
+    color:#fff;
+}
+
+.cfr-h1-b{
+    width: 100%;
+    height:8rem;
+    text-align: center;
+    font-size: 10px;
+}
+.cfr-b{
+    border:0;
+    height: 10rem;
+}
+.cfr-b>span{
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;
+    font-size:10px;
+    font-weight: 100;
+    text-align: left;
+    margin-left: 1rem;
+}
+.cfr-h1-b>button{
+    width:20%;
+    border:0;
+    height:2rem;
+    margin-left: 1rem;
+    background-color:rgba(7, 0, 0, 0.26);
+    color:white;
+    box-shadow: 0px 2px 3px black inset;
+    border-radius: 5px;
+}
+.cfr-h1-b>button:hover{
+    background-color:rgb(104, 87, 87);
+}
+.cfr-h1-b a{
+    color: rgb(255, 255, 255);
+}
+/* 细节cfr-h1 */
+.cfr-h2{
+    height: 11rem;
+    border:0;
+}
+.cfr-h2-h>span:first-child{
+    color:rgb(254,255,254);
+    font-size:6px;
+}
+.cfr-h2-h>span:last-child{
+    color:white;
+    font-size:6px;
+}
+.cfr-h2-h,.cfr-h2-b{
+    width: 100%;
+    text-align:left;
+    margin-left: 1rem;
+}
+.cfr-h2-h{
+    height: 5rem;
+    line-height: 5rem;
+    font-size:1.2rem;
+    font-weight: 100;
+}
+.cfr-h2-h::after{
+    content: "";
+    height: 2px;
+    width:50px;
+    position: absolute;
+    margin-top:-.5rem;
+    background-color:rgb(136, 136, 146);
+    display: block;
+    transition: .5s ease-in-out;
+}
+.cfr-h2-h:hover::after{
+    width:10rem;
+    background-color:green;
+}
+.cfr-h2-b{
+    height: 5rem;
+    line-height:3rem;
+}
+.cfr-h2-b>input{
+    width:90%;
+    height: 2rem;
+    border:0;
+    border-radius: 5px;
+    color: rgb(54, 21, 21);
+    background-color:rgb(238, 222, 222);
+    text-align: center;
+    box-shadow: 0px 2px 3px black inset;
+}
+
+/* 查询失败加入此操作 */
+
+
+.cfr-h2-b>button{
+    width:90%;
+    height:2rem;
+    border:0;
+    position: relative;
+    top: -.5rem;
+    border-radius: 5px;
+    color: rgb(254,255,254);
+    background-color:rgb(160, 147, 147);
+    box-shadow: 0px 2px 3px black inset;
+}
+/* 细节cfr-h2 */
+.cfr-b1{
+    height:27rem;
+    border:0;
+}
+.cfr-b1-h,.cfr-b1-b{
+    text-align:left;
+    margin-left: 1rem;
+}
+.cfr-b1-h{
+
+    height: 5rem;
+    line-height: 5rem;
+    font-size:1.2rem;
+    font-weight: 100;
+}
+.cfr-b1-h::after{
+    content: "";
+    height: 2px;
+    width:50px;
+    position: absolute;
+    margin-top:-.5rem;
+    background-color:rgb(136, 136, 146);
+    display: block;
+    transition: .5s ease-in-out;
+}
+.cfr-b1-h:hover::after{
+    width:10rem;
+    background-color:rgb(255, 255, 255);
+}
+.cfr-b1-h>span{
+    color: #fff;
+    font-size: 6px;
+}
+.cfr-b1-b{
+    width: 90%;
+    height: 20rem;
+    box-sizing: border-box;
+    padding: 24px;
+    border:1px solid rgb(180, 178, 178);
+    margin-top: 1rem;
+}
+.cfr-b1-b>img{
+    width: 100%;
+    transition:.8s;
+}
+/* 细节cfr-b1 */
+.cfr-b2{
+    height:18rem;
+    border:0;
+}
+.cfr-b2-h,.cfr-b2-b{
+    text-align:left;
+    margin-left: 1rem;
+}
+.cfr-b2-h{
+
+    height: 5rem;
+    line-height: 5rem;
+    font-size:1.2rem;
+    font-weight: 100;
+    font-size: 6px;
+}
+.cfr-b2-h::after{
+    content: "";
+    height: 2px;
+    width:50px;
+    position: absolute;
+    margin-top:-.5rem;
+    background-color:rgb(136, 136, 146);
+    display: block;
+    transition: .5s ease-in-out;
+}
+.cfr-b2-h:hover::after{
+    width:10rem;
+    background-color:green;
+}
+.cfr-b2-b{
+    width: 90%;
+    height: 16rem;
+    box-sizing: border-box;
+}
+.cfr-b2-b>button{
+    background-color: #fff;
+    border:0px solid rgb(212, 212, 212);
+    padding:6px;
+    box-shadow: 1px 1px 1px black;
+    height: 1.5rem;
+    margin-top: 1rem;
+    padding-bottom:1px;
+    padding-top:1px;
+    border-radius: 5px;
+    transition: .5s;
+    transform:translateY(0rem);
+    box-sizing: border-box;
+}
+.cfr-b2-b>button:hover{
+    transform: translateY(-.8rem)
+}
+
+
+/* ****************细节cfr-b2 ************************/
+
+.cfr-f{
+    height: 0;
+    border:0;
+}
+/* cfr-f */
+
+.f-page-l{
+    /* width: 70%; */
+    height:5rem;
+    position: relative;
+    margin-bottom: 0rem;
+    /* top: 10rem; */
+}
+.f-page-l a{
+    color: #fff;
+}
+
+/* 注册界面 */
+.cfr-h1>.zhuce{
+    display: block;
+}
+.cfr-h1>.denglu{
+    display: none;
+}
+/* 登录界面 */
+
+.disnone>.zhuce{
+    display: none;
+}
+.disnone>.denglu{
+    display:block;
+}
+.t-xiang{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    overflow: hidden; 
+    transition:.5s;
+}
+.t-xiang>img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: relative;
+    left:5%;
+    top:10%;
+    padding: 2px;
+    box-sizing: border-box;
+    transition:all 2s;
+    border:1px solid rgb(245, 245, 245);
+    box-shadow: 0px 2px 6px rgb(0, 0, 0),
+    0px 2px 5px rgb(250, 250, 250) inset;
+    cursor: pointer;
+    display: block;
+    background:url(../img/wx/02.jpg);
+}
+.t-xiang>img:hover{
+    transform:rotate(360deg);
+    box-sizing: border-box;
+    animation: music .5s linear;
+}
+@keyframes tX{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+.user-name>h5{
+    display:block;
+    top: 1rem;
+    position: relative;
+    text-align:left;
+    width: 50%;
+    left:40%;
+    margin-top: 10px;
+    font-size: 10px;
+    color:rgba(255, 239, 239, 0.86);
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    background-color:transparent;
+    transition: all .5s;
+}
+.user-name>h5:hover{
+    text-shadow: -1px 2px 3px rgb(0, 0, 0);
+    color: rgb(46, 206, 235);
+}
+/* 注销按钮操作 */
+
+.user-name>h5>a:last-child{
+    color:#885454;
+    background-color:black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-shadow: 0px 0px 0px transparent;
+}
+/* music */
+.music{
+    width: 100%;
+    /* height: 5rem; */
+}
+
+
+.Progress-bar{
+    width:90%;
+    position: relative;
+    left: 5%;
+    height: 1rem;
+    background-color:black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#play,#pause{
+    width:40%;
+    left: 5%;
+    margin-left:0;
+    float: left;
+    position: relative;
+    height: 2rem;
+    margin-top:1rem;
+    border-radius: 5px;
+    background-color: rgba(7, 0, 0, 0.26);
+    cursor: pointer;
+    box-shadow: 0px 2px 3px black inset;
+}
+#pause{
+    margin-left: 2rem;
+}
+#play,#pause p{
+    font-size: 5px;
+    text-align: center;
+    line-height: 2rem;
+}
+#play:hover,#pause:hover{
+    background-color: rgb(80, 77, 77);
+    /* animation: music .5s linear; */
+
+    /* transition: 1s; */
+}
+@keyframes music{
+    0%{transform: translateX(0rem)}
+    25%{transform:  translateX(-.6rem)}
+    50%{transform: translateX(0rem)}
+    75%{transform:  translateX(.6rem)}
+    100%{transform: translateX(0rem)}
+}
+
+.barBox{
+    width:90%;
+    left: 5%;
+    position: relative;
+    border-radius: 5px;
+    height:.8rem;
+    transition: 1s;
+    background-color:rgba(206, 203, 203, 0.322);
+    overflow: hidden;
+            /* animation: musicBox 10s linear infinite; */
+}
+@keyframes musicBox{
+    0%{background-color: #fff;}
+    20%{background-color: red;}
+    40%{background-color: black;}
+    60%{background-color:blue;}
+    80%{background-color:red;}
+    100%{background-color: black;}
+}
+.timeBox{
+    width:0;
+    border-radius:5px;
+    background-color:rgb(255, 255, 255);
+    height:100%;
+    box-sizing: border-box;
+    padding: 2px;
+    position: relative;
+    transition: 1s;
+}
+ /*
+    注释:search
+    注释:
+ */
+ .search>img{
+     display:block;
+     position: absolute;
+     height: 2rem;
+     top: -2.5rem;
+     background-color:transparent;
+     box-sizing: border-box;
+     animation: search 2s linear infinite;
+ }
+ @keyframes search {
+     0%{transform: translate(0rem)}
+     50%{transform: translate(1rem)}
+     100%{transform: translate(0rem)}
+ }
+
+ .timeBox:hover{
+     background: #000;
+ }
+
+ @media screen and (max-width:1024px){
+    #section-h{
+        width: 90%;
+        
+    }
+    .t-xiang>img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .user-name>h5{
+        color: rgb(207, 207, 207);
+        font-size: 5px;
+    }
+    .card{
+        height: 10rem;
+    }
+    .card-img{
+        width: 12rem;
+    }
+    .card-r{
+        width: 24rem;
+    }
+    #header-h>ul>li{
+        margin-top: 1rem;
+    }
+    #header-h{
+        height: 65%;
+    }
+}

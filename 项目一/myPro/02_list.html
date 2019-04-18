@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<!--获取所有的用户信息-->
+<title>Jurisdiction</title>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" href="img/wx/favicon.ico" />
+<script src="js/jquery-1.11.3.js"></script>
+<link rel="stylesheet" href="css/root_list.css">
+<script src="js/root.js"></script>
+<style>
+</style>
+</head>
+<body onload="postuser()">
+	<!-- <div id="middle">
+		<div class="middle-left">操作</div>
+		<div class="middle-right">库信息</div>
+		<div class="middle-center">恢复</div>
+	</div> -->
+	<!-- 右侧管理 -->
+	<div id="right">
+		<div class="rootH">
+			<h2>MF</h2>
+		</div>
+		<div class="rootHp">
+			<!-- <p>上传文章</p> -->
+		</div>
+		<!-- 添加数据 -->
+		<div id="root_insert">
+			<div class="insert_h">
+				<p>Add article：上传文件▲</p>
+			</div>
+			<div class="Add">
+			     <p>标签</p><input type="text" name="a" class="aa" placeholder="超帅标签……"><br>
+				 <p>标题</p><input type="text" name="b" placeholder="引人注目的标题……"><br>
+				 <p>内容</p><input type="text" name="c" class="insert_p" placeholder="内容呀……"><br>
+					<p>文件</p><input type="file" name="d" id="image-s">
+					<img src="" id="image-f" alt="">
+					<p class="tp">状态:……</p>
+				<input type="button" class="btn1" value="上传">
+			</div>
+		</div>
+		<div id="upDate">
+			<div class="upDate-h">
+				<p>Modify file：修改文件▲</p>
+			</div>
+			<div class="modify">
+				 <p>查询</p><input type="text" placeholder="板块id……" name="tid">
+				 <p class="state-h">状态：</p>
+				 <p>search……</p><input type="button" class="btn2" value="search">
+				 <p>表题</p><input type="text" class="title-h" name="sltext">
+				 <p>内容</p>
+				 <!-- <input type="text" class="content-text" name="srtext"> -->
+				<textarea name="srtext" id="" class="content-text" cols="30" rows="20"></textarea>
+				 <p class="state">状态：</p>
+				 <p>修改状态</p><input type="button" value="update" class="btn3">
+			</div>
+		</div>
+		<!-- *************************************** -->
+		<div id="left">
+			<!-- <h1>管理员-用户基本数据 <br><p>用户表单</p> </h1> -->
+			<table cellspacing="0">
+				<thead>
+					<th>User number</th>
+					<th>User name</th>
+					<th>Encryption cipher</th>
+					<th>User E-mail</th>
+					<th>User Personality Signature</th>
+					<th>Gender</th>
+					<th>Administrator operation</th>
+				</thead>
+				<tbody id="dd"></tbody>
+					<!-- <tbody id="dd"></tbody> -->
+			</table>
+			<!-- <h1>管理员-text文本数据修改 <br><p>文本表单</p> </h1> -->
+			<table cellspacing="0">
+				<thead>
+					<th>User number</th>
+					<th>Card text headline[卡片文本主题标签]</th>
+					<th>Card Text Theme[卡片主题文本标签]</th>
+					<th>Card Text Theme Content[卡片主题文本内容]</th>
+					<th>Card Text Time[创建时间]</th>
+					<th>Card Text iMage</th>
+					<th>Administrator operation[操作]</th>
+				</thead>
+				<tbody id="aa"></tbody>		
+			</div>
+	</div>
+</body>
+
+</html>

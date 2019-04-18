@@ -1,0 +1,42 @@
+<!--pages/order/order.wxml-->
+<view class='add'>
+<view wx:for="{{list1}}" wx:key="{{key}}" class='addre'>
+     <view class='addre1'>{{item.uname}}
+      <text decode="{{true}}" space='{{true}}'>&nbsp;&nbsp;</text>{{item.phone}}
+      </view>
+      <view class="addre2">
+      {{item.addre}}{{item.address}}
+      </view>
+       </view>
+</view>
+<view class='content'>
+<view class='top'>pay</view>
+<view class='show' wx:for='{{list}}' wx:key="i">
+<view class="tanchuang {{isHidden == 1 ? 'display-block':'display-none'}}" wx:if="{{showModalStatus}}">
+<view animation='{{animationData}}' class="tangchuang  {{isHidden == 1 ? 'display-block':'display-none'}}">
+ <view class='tc-title'>
+r
+  <text class='qx'  bindtap='hideModal' data-id='{{index}}' data-did='{{item.did}}'>×</text>
+  <view>水果shop商店</view>
+  <span>￥{{numbers}}</span>
+  </view>
+</view>
+</view>
+<image src='{{item.src}}' mode="aspectFill" lazy-load='true'></image>
+<view>
+<span>{{item.dname}}</span>
+<span>斤：{{item.price}}/斤</span>
+<span>x{{item.count}} 斤</span>
+<span>￥{{item.cprice}}</span>
+</view>
+<view class='bottom'>
+<span>总计￥{{numbers}}</span>
+<span bindtap='showTan' data-id='{{item.did}}'>去支付</span>
+</view>
+</view>
+<view class='cc'>
+<span>配送费</span>
+<span>￥0</span>
+</view>
+</view>
+

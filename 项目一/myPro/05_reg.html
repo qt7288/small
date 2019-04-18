@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<input type="text" name="uname">账号<br>
+		<input type="password" name="upwd">密码<br>
+		<input type="email" name="email">邮箱<br>
+		<input type="phone" name="phone">电话<br>
+		<input type="text" name="user_name">姓名<br>
+		<input type="radio" name="gender" id="man" value="1" checked="man"><label for="man">男</label><input type="radio" name="gender"  id="woman" value="0"><label for="woman">女</label><br>
+		<button onclick="reg">注册</button>
+		
+	</div>
+	<script>
+		
+		function reg(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					if(man.checked){
+						gender=="1";
+					}else if(woman.checked){
+						gender=="0"
+					}else{
+						gender=="default";
+					}
+				}
+				var url="/myPro/register";
+				xhr.open('post',url,true);
+				var formdata="uname="+uname.value+"&upwd="+upwd.value+
+		"&email="+email.value+"&phone="+phone.value+"&user_name="+user_name.value+"&gender="+gender+"&uid="+uid.value;
+		console.log(formdata);
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xhr.send(formdata);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* pages/kefu/kefu.wxss */
+
+.dt{
+  background:url("http://127.0.0.1:3000/images/bg03.jpg");
+ width:100%;
+ height:390rpx;
+}
+.dt.image{
+  width:100%;
+  height:500rpx;
+}
+.as{
+  width: 100%;
+}
+.cc{
+  width: 20%;
+  font-size: 24rpx;
+  left:38%;
+  position: relative;
+  text-align: center;
+  color:#faa;
+}
+/*电话  */
+.map{
+ display:flex;
+ justify-content: space-around;
+ padding:0;
+ margin-top: 60rpx;
+}
+.map button{
+ color:#fff;
+ background-color:#F4BA32;
+ font-size:16px;
+ display: flex;
+ align-items:center;
+ width:47%;
+ height:100rpx;
+}
+.map image{
+ width:40rpx;
+ height:40rpx;
+ padding-left:58rpx;
+ margin-top:3px;
+}

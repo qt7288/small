@@ -1,0 +1,88 @@
+<!--pages/detail/detail.wxml-->
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+   <view class='info' wx:for='{{list}}' wx:key='{{item.id}}'>
+   <view class='top'>
+   <view class='slider'>
+    <swiper autoplay interval="3500" indicator-dots="{{true}}">
+        <swiper-item>
+            <image src='http://127.0.0.1:3000/{{item.src2}}' mode="aspectFill" lazy-load='true'/>
+        </swiper-item>
+        <swiper-item>
+            <image src='http://127.0.0.1:3000/{{item.src1}}' mode="aspectFill" lazy-load='true'/>
+        </swiper-item>
+    </swiper>
+  </view>
+  </view>
+ <view class='x'>{{item.dname}}</view>
+ <view class='x1'>￥{{filters.toFix(item.price)}}</view>
+<view class='cc'>
+<text class='c'>选择</text>
+<text class='c1' bindtap='showTan'>规格</text>
+</view>
+<view class='tc-tab'>
+ <view class='tab-f' bindtap='go'>
+ <image src='/pages/tabs/index.png' bindtap='f1'></image>
+ <span >首页</span>
+ </view>
+ <view class='tab-s'>
+ <image src='/pages/tabs/store.png' bindtap='cc' data-id='{{item.did}}' data-price='{{item.price}}'  data-dname='{{item.dname}}' data-img='http://127.0.0.1:3000/{{item.src2}}'></image>
+ <span >收藏</span>
+ </view>
+ <view class='tab-a' bindtap='showTan'>加入购物车</view>
+ <view class='tab-b' bindtap='showTan'> 立即购买</view>
+ </view>
+<view class="tanchuang {{isHidden == 1 ? 'display-block':'display-none'}}" wx:if="{{showModalStatus}}">
+<view animation='{{animationData}}' class="tangchuang  {{isHidden == 1 ? 'display-block':'display-none'}}">
+ <view class='tc-product'>
+ <view class='tc-img'>
+ <image  src='http://127.0.0.1:3000/{{item.src2}}' mode="aspectFill" lazy-load='true'>
+ </image>
+ </view>
+ <view class='tc-title'>
+  <text class='p4'>￥{{filters.toFix(item.price)}}</text>
+   <text class='p5'>库存{{item.stock}}</text>
+  <text class='qx'  bindtap='hideModal'>×</text>
+  </view>
+ </view>
+ <view class='tc-pri'>
+  <text class='p1'>单价</text>
+  <text class='p2'>{{item.price}}/斤</text>
+ </view>
+ <view class='tc-count'>
+ <text class='p3'>数量</text>
+ <view class='p3-r'>
+ <span class='p3-r1' bindtap="{{numbers>1?'reduce':''}}">-</span>
+ <span class='p3-r2' bindtap='cartRemove'>{{numbers}}</span>
+ <span class='p3-r3' bindtap='add'>+</span>
+ </view>
+ 
+ </view>
+ <view class='tc-tab1'>
+ <view class='tab-f1' bindtap='go'><image src='/pages/tabs/index.png' bindtap='f1'></image>
+ <span >首页</span></view>
+ <view class='tab-s1'><image src='/pages/tabs/store.png'></image>
+ <span>收藏</span></view>
+ <view class='tab-a1' bindtap='addcart' data-price='{{item.price}}' data-id='{{item.did}}' data-dname='{{item.dname}}' data-img='http://127.0.0.1:3000/{{item.src2}}' >加入购物车</view>
+ <view class='tab-b' bindtap='addcart'>立即购买</view>
+ </view>
+</view>
+</view>
+<view class="container1 width100 ">
+  <view class="tab bg_fff">
+    <view class="tab-content mgb10rpx">
+      <view  class="btn right_btn {{select==0?'active':''}}" data-area="0" bindtap="changeArea">商品详情</view>
+   
+      <view  class="btn left_btn {{select==1?'active':''}}" data-area="1" bindtap="changeArea">评价</view>
+            
+    </view>
+  </view>
+  <view wx:if="{{0==select}}">
+<image src='http://127.0.0.1:3000/{{item.src1}}' lazy-load='true' mode='aspectFill'></image>
+<image src='http://127.0.0.1:3000/{{item.src2}}' lazy-load='true' mode='aspectFill'></image>
+  </view>
+  <view wx:if="{{1==select}}" class="param_area">
+  暂无评价
+  </view>
+</view>
+
+</view>

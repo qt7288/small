@@ -1,0 +1,135 @@
+/* pages/address/address.wxss */
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+}  
+.product-name-wrap{
+  margin: 0px 10px;
+  font-size: 14px;
+  color: #404040;
+  border-bottom:1px solid #ddd;
+  width:100%;
+}
+.top{
+  height:275rpx;
+  /* border-bottom:1px solid #ddd; */
+}
+.ui-list-item-info{
+  margin: 5px 0px;
+}
+.ui-list-item-info text{
+  margin-left:220rpx;
+}
+.bottom{
+  border-bottom:6px solid #ddd;
+  display:flex;
+  font-size:14px;
+  height:48px;
+}
+.bottom .left{
+  margin-top:38rpx;
+}
+.bottom .right{
+  position:relative;
+}
+.bottom .right view:first-child{
+margin-top:45rpx;
+margin-left:225rpx;
+position:absolute;
+width:118rpx;
+color:#4f4f4f;
+padding-left:54rpx;
+}
+.bottom .right image{
+width:38rpx;
+height:38rpx;
+
+}
+.bottom .right view:last-child{
+margin-left:182px;
+padding-top:10rpx;
+width:118rpx;
+position:absolute;
+margin-top:40rpx;
+color:#4f4f4f;
+}
+.ui-list-item-address{
+  color: #585c64;
+}
+
+.ui-list-item-time{
+  margin: 5px 0px;
+}
+
+.ui-list-item-del{
+  position: absolute;
+  right: 10px;
+  color: #585c64;
+  margin-top:-63rpx;
+
+}
+
+/* 分割线 */
+
+.separate {
+
+  margin: 5px 0px;
+
+  height: 2rpx;
+
+  background-color: #f2f2f2;
+
+}
+
+.add-address{
+  margin:20rpx auto;
+  width: 80%;
+  border:1rpx solid #000;
+  background-color:#fff;
+  font-size:18px;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius:20rpx;
+}
+
+.add-img{
+
+  margin-right: 15rpx;
+
+  width: 15px;
+
+  height: 15px;
+
+}
+/* 默认地址 */
+
+radio .wx-radio-input{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx;
+   height: 40rpx;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked{
+   border: none;
+   background: red !important;
+}
+ .cc{
+  color:red
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.cc{
+  color:red;
+}

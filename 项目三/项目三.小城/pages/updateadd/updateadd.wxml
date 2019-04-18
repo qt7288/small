@@ -1,0 +1,24 @@
+
+<view class='con'  wx:for='{{list}}' wx:key="i">
+<form bindsubmit='searchProduct' data-id='{{item.id}}'>
+<view class='cc' >
+<span>收货人</span>
+<span><input type='text' placeholder='请输入收货人' name='uname' value='{{item.uname}}'></input></span>
+</view>
+<view class='c1'>
+<span>联系电话</span>
+<span><input type='text' placeholder='请输入手机号' name='phone' value='{{item.phone}}'></input></span>
+</view>
+<view class='c2'>
+<span>所在地区</span>
+<span><input type='text' placeholder='输入地区' name='addre' value='{{item.addre}}'></input></span>
+</view>
+<view class='c3'>
+<span>详细地址</span>
+<span><input type='text' placeholder='请输入详细地址' name='address' value='{{item.address}}'></input></span>
+</view>
+
+</form>
+</view>
+
+

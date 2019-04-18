@@ -1,0 +1,8 @@
+<!--pages/self/self.wxml-->
+<view class='dt'>
+<image src='/pages/tabs/a.jpg' mode='aspectFit' lazy-load></image>
+</view>
+<view class='c'>
+<text class='t'>水果店建立于2018年12月25日，本店经营范围都是有梨果，核果，瓜类，莲子等水果，是一家满足广大用户的水果商店。本店致力于为顾客带来最安心，最便捷，最实惠的水果店，让顾客满意是我们追求，让顾客安心是我们的宗旨。</text>
+</view>
+

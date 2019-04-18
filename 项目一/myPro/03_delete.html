@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+</head>
+<style>
+	input:focus{
+		background-color: yellow;
+	}
+</style>
+<body>
+			<input type="text" id="id">
+			<button onclick="deleteUesr()">删除</button>
+		<script>
+			function deleteUesr(){
+				var xhr=new XMLHttpRequest();
+				
+				xhr.onreadystatechange=function(){
+					
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						//u.innerHTML=result;
+						alert(result);
+					}	
+		}
+		var url="/myPro/deleteUser?id="+id.value;
+		xhr.open("get",url,true);
+			xhr.send();
+	}
+	</script>
+</body>
+</html>
